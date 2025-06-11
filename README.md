@@ -8,7 +8,7 @@
 
 ## 1. [Chaos Dungeon](#1-카오스-던전)
 
-## 2. [Poly Hero](#2-Poly-Hero)
+## 2. [Poly Hero](#2-Poly-Hero-1)
 
 <br><br><br>
 
@@ -57,7 +57,7 @@
 <br><br>
 
 - **Item.cs | ItemDropTable.cs**
-  - [Item.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/Item.cs) [ItemDropTable.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/ItemDropTable.cs)
+  - [Item.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/Item.cs)   [ItemDropTable.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/ItemDropTable.cs)
 - Item.cs
   - 아이템의 구성 및 개수를 관리하는 스크립트입니다.
 - ItemDropTable.cs
