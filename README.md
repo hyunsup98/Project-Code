@@ -8,7 +8,7 @@
 
 ## 1. [Chaos Dungeon](#1-카오스-던전)
 
-## 2. [Poly Hero](#2.Poly-Hero)
+## 2. [Poly Hero](#2-Poly-Hero)
 
 <br><br><br>
 
