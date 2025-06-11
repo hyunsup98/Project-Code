@@ -83,8 +83,26 @@
 
 <br><br>
 
+<br><br><br><br><br>
 
+# 2. Poly Hero
 
+- **프로젝트 소개**
+  - 로우폴리 스타일의 3D RPG 게임입니다.
+
+    자원을 수집하고 아이템을 제작해 몬스터를 잡으세요. 무기를 강화하고 레벨업으로 성장해 보스를 잡아보세요!
+    
+<br>
+
+## 2-1 주요 기능 코드
+
+- **EnemyAI.cs**
+  - 경로: *Poly Hero/Poly Hero Scripts/System/Pattern/Behavior Tree/...*
+  - 몬스터의 AI와 동작을 관리하는 스크립트입니다.
+  - 행동트리를 사용해 몬스터의 행동을 관리합니다.
+- 행동트리 관련 스크립트: 같은 경로의 BehaviorTreeRunner.cs, INode.cs, ActionNode.cs, SelectorNode.cs, SequenceNode.cs
+
+<br><br>
 
 
 
