@@ -103,7 +103,7 @@
 ## 2-1 주요 기능 코드
 
 - **EnemyAI.cs**
-  - 경로: *Poly Hero/Poly Hero Scripts/System/Pattern/Behavior Tree/...*
+  - [EneyAI.cs 이동](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
   - 몬스터의 AI와 동작을 관리하는 스크립트입니다.
   - 행동트리를 사용해 몬스터의 행동을 관리합니다.
 - 행동트리 관련 스크립트: 같은 경로의 BehaviorTreeRunner.cs, INode.cs, ActionNode.cs, SelectorNode.cs, SequenceNode.cs
