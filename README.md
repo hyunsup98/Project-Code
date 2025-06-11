@@ -6,9 +6,9 @@
 
 # 목차
 
-## 1. [Chaos Dungeon](#카오스 던전)
+## 1. [Chaos Dungeon](#1-카오스-던전)
 
-## 2. [Poly Hero](#Poly Hero)
+## 2. [Poly Hero](#2-Poly-Hero)
 
 <br><br><br>
 
