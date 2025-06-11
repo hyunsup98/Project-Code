@@ -6,9 +6,9 @@
 
 # 목차
 
-## 1. [Chaos Dungeon](https://github.com/hyunsup98/Project-Code/edit/main/README.md#L13)
+## 1. [Chaos Dungeon](#카오스 던전)
 
-## 2. [Poly Hero](https://github.com/hyunsup98/Project-Code/edit/main/README.md#)
+## 2. [Poly Hero](#Poly Hero)
 
 <br><br><br>
 
