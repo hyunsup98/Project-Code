@@ -1,6 +1,7 @@
     # 포트폴리오 코드를 정리해놓은 Repository 입니다.
 
 **아래의 주요 기능 코드 외에도 전체 코드가 담겨져있습니다.**
+**스크립트의 파란 글씨를 누르시면 해당 스크립트로 이동하여 보실 수 있습니다.**
 
 <br><br><br>
 
@@ -103,7 +104,7 @@
 ## 2-1 주요 기능 코드
 
 - **EnemyAI.cs**
-  - [EneyAI.cs 이동](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
+  - [EnemyAI.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
   - 몬스터의 AI와 동작을 관리하는 스크립트입니다.
   - 행동트리를 사용해 몬스터의 행동을 관리합니다.
 - 행동트리 관련 스크립트: 같은 경로의 BehaviorTreeRunner.cs, INode.cs, ActionNode.cs, SelectorNode.cs, SequenceNode.cs
