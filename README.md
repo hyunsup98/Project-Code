@@ -26,7 +26,7 @@
 ## 1-1 주요 기능 코드
 
 - **ObjectPool.cs**
-  - 경로: *Chaos Dungeon/Chaos Dungeon Scripts/Util/...* [경로](https://github.com/hyunsup98/Project-Code/tree/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Utll)
+  - 경로: *Chaos Dungeon/Chaos Dungeon Scripts/Util/...* [경로]([https://github.com/hyunsup98/Project-Code/tree/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Utll](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Utll/ObjectPool.cs))
   - 오브젝트의 효율적인 관리를 위해 오브젝트 풀링 기법을 사용하였습니다.
   - 오브젝트 풀링을 사용하는 객체가 여러개이므로 제네릭을 활용해 커스텀 ObjectPool 스크립트를 작성했습니다.
 
