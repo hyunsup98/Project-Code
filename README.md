@@ -6,7 +6,7 @@
 
 # 목차
 
-## 1. [Chaos Dungeon](https://github.com/hyunsup98/Project-Code?tab=readme-ov-file#13)
+## 1. [Chaos Dungeon](https://github.com/hyunsup98/Project-Code/edit/main/README.md#L13)
 
 ## 2. [Poly Hero](https://github.com/hyunsup98/Project-Code/edit/main/README.md#)
 
