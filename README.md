@@ -121,13 +121,15 @@
 - **Collection.cs | CollectionZone.cs**
   - [Collection.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Environment/Collection.cs)    [CollectionZone.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Environment/CollectionZone.cs)
   - Collection.cs는 플레이어가 채집 가능한 자원을 관리하는 클래스입니다. 충돌 여부를 통해 플레이어가 손에 든 도구가 특정 타입일 때 채집할 수 있습니다.
-  - CollectionZone.cs는 자원이 생성되는 지역으로 자원의 생성을 관리하는 클래스입니다. 자원은 생성 지역 내에서 랜덤한 곳에 생성됩니다. 이때 생성될 지역에 다른 자원이 있는 경우 생성지역을 재탐색합니다. 동시에 생성 될 자원의 최대 개수를 설정할 수 있습니다.
+  - CollectionZone.cs는 자원이 생성되는 지역으로 자원의 생성을 관리하는 클래스입니다.
+  - 자원은 생성 지역 내에서 랜덤한 곳에 생성됩니다. 이때 생성될 지역에 다른 자원이 있는 경우 생성지역을 재탐색합니다. 동시에 생성 될 자원의 최대 개수를 설정할 수 있습니다.
 
 <br><br>
 
-- **.cs**
-  - [.cs]()
-  - 
+- **Qeust.cs**
+  - [Quest.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Quest/Quest.cs)
+  - Scriptable Object 방식을 사용한 퀘스트 클래스입니다.
+  - 몬스터 처치, 자원 수집, npc 대화의 유형이 있고, 퀘스트 진행 상황은 수락 전, 수락, 완료(보상 받기 전), 완료(보상 받기 후)로 나뉩니다.
 
 <br><br>
 
