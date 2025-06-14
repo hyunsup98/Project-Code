@@ -29,13 +29,13 @@
 - **ObjectPool.cs**
   - [ObjectPool.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Utll/ObjectPool.cs)
   - 오브젝트의 효율적인 관리를 위해 오브젝트 풀링 기법을 사용하였습니다.
-  - 오브젝트 풀링을 사용하는 객체가 여러개이므로 제네릭을 활용해 커스텀 ObjectPool 스크립트를 작성했습니다.
+  - 오브젝트 풀링을 사용하는 객체가 여러개이므로 제네릭을 활용해 커스텀 ObjectPool 클래스를 작성했습니다.
 
 <br><br>
 
 - **MapManager.cs**
   - [MapManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Map/MapManager.cs)
-  - 스테이지에 진입 시 랜덤으로 맵을 생성해주는 스크립트입니다.
+  - 스테이지에 진입 시 랜덤으로 맵을 생성해주는 클래스입니다.
   - 이차원 배열을 이용해 맵 틀을 초기화하고 랜덤한 좌표부터 맵을 생성해 나가는 방식입니다.
 
 
@@ -43,7 +43,7 @@
 
 - **Player.cs**
   - [Player.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Entity/Player/Player.cs)
-  - 플레이어 조작, 판정 등을 관리하는 스크립트입니다.
+  - 플레이어 조작, 판정 등을 관리하는 클래스입니다.
   - Spine으로 만들어진 캐릭터로 Spine API를 이용해 애니메이션의 전환과 재생을 관리했습니다. 
 
 
@@ -51,7 +51,7 @@
 
 - **DialogManager.cs**
   - [DialogManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/System/DialogManager.cs)
-  - npc의 아이디, 대사를 저장한 csv 파일을 파싱해 관리하는 스크립트입니다.
+  - npc의 아이디, 대사를 저장한 csv 파일을 파싱해 관리하는 클래스입니다.
   - npc의 아이디와 대조후 각 npc에게 맞는 대사를 반환합니다.
 
 
@@ -60,9 +60,9 @@
 - **Item.cs | ItemDropTable.cs**
   - [Item.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/Item.cs)   [ItemDropTable.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Item/ItemDropTable.cs)
 - Item.cs
-  - 아이템의 구성 및 개수를 관리하는 스크립트입니다.
+  - 아이템의 구성 및 개수를 관리하는 클래스입니다.
 - ItemDropTable.cs
-  - 보물상자를 열거나 몬스터를 처치할 때 드랍될 아이템을 관리하는 드랍테이블 스크립트입니다.
+  - 보물상자를 열거나 몬스터를 처치할 때 드랍될 아이템을 관리하는 드랍테이블 클래스입니다.
   - Scriptable Object 방식으로 모듈화를 진행해 드랍테이블의 추가 및 관리가 유연해지도록 설계했습니다.
 
 
@@ -78,7 +78,7 @@
 
 - **Skill.cs**
   - [Skill.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Object/Skill/Skill.cs)
-  - 플레이어를 포함한 엔티티들이 사용할 스킬을 관리하는 스크립트입니다.
+  - 플레이어를 포함한 엔티티들이 사용할 스킬을 관리하는 클래스입니다.
   - 스킬의 시작지점, 이동 속도, 회전, 대미지 등을 설정할 수 있으며 주변환경에 막히는지, 차징 스킬인지 등의 여부를 체크해 다양한 형식의 스킬을 간단하게 추가할 수 있습니다.
 
 
@@ -105,9 +105,29 @@
 
 - **EnemyAI.cs**
   - [EnemyAI.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
-  - 몬스터의 AI와 동작을 관리하는 스크립트입니다.
+  - 몬스터의 AI와 동작을 관리하는 클래스입니다.
   - 행동트리를 사용해 몬스터의 행동을 관리합니다.
 - 행동트리 관련 스크립트: 같은 경로의 BehaviorTreeRunner.cs, INode.cs, ActionNode.cs, SelectorNode.cs, SequenceNode.cs
+
+<br><br>
+
+- **NPC.cs**
+  - [NPC.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/NPC/NPC.cs)
+  - NPC를 관리하는 추상클래스입니다.
+  - 충돌체크를 통해 대화가 가능한지 여부를 체크하고, E키를 누르면 대사 UI를 띄워 출력 및 이벤트 메서드를 실행합니다.
+
+<br><br>
+
+- **Collection.cs | CollectionZone.cs**
+  - [Collection.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Environment/Collection.cs)    [CollectionZone.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Environment/CollectionZone.cs)
+  - Collection.cs는 플레이어가 채집 가능한 자원을 관리하는 클래스입니다. 충돌 여부를 통해 플레이어가 손에 든 도구가 특정 타입일 때 채집할 수 있습니다.
+  - CollectionZone.cs는 자원이 생성되는 지역으로 자원의 생성을 관리하는 클래스입니다. 자원은 생성 지역 내에서 랜덤한 곳에 생성됩니다. 이때 생성될 지역에 다른 자원이 있는 경우 생성지역을 재탐색합니다. 동시에 생성 될 자원의 최대 개수를 설정할 수 있습니다.
+
+<br><br>
+
+- **.cs**
+  - [.cs]()
+  - 
 
 <br><br>
 
