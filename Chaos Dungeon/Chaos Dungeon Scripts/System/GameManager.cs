@@ -13,23 +13,23 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
-    //ÇÃ·¹ÀÌ¾î°¡ ÁøÇàÁßÀÎ ¸Ê
+    //ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     [SerializeField] Map playMap;
-    //ºê±Ý
+    //ï¿½ï¿½ï¿½
     public AudioSource bgm;
 
     [Range(0, 1)] public float soundSize = 1f;
     [Range(0, 1)] public float bgmSize = 0.15f;
 
-    //ÇÃ·¹ÀÌ¾î
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½
     public Player player;
     public Player playerPrefab;
-    //°ÔÀÓ ¼Óµµ
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
     public float gameSpeed = 1;
-    //°ÔÀÓ »óÅÂ
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public GameState state;
 
-    //µî±Þ¿¡ ¸Â´Â ¹«±â¸¸ ³Ö¾îµÎ°í »óÈ²¿¡ ¸Â°Ô ²¨³»¾²±â À§ÇÔ
+    //ï¿½ï¿½Þ¿ï¿½ ï¿½Â´ï¿½ ï¿½ï¿½ï¿½â¸¸ ï¿½Ö¾ï¿½Î°ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public List<Item> commonItems = new List<Item>();
     public List<Item> normalItems = new List<Item>();
     public List<Item> rareItems = new List<Item>();
@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
     public UIManager ui;
     [SerializeField] UIManager uiprefab;
 
-    //½½·Î¿ì¸ð¼Ç Áö¼Ó½Ã°£
+    //ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó½Ã°ï¿½
     public float slowTime = 4f;
     bool isSlowMotion = false;
 
@@ -60,19 +60,9 @@ public class GameManager : Singleton<GameManager>
             Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
         }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            MapManager.instance.EntryLastMap();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            player.mobStat.hp = player.mobStat.max_hp = 500;
-            player.mobStat.damage = 500;
-        }
     }
 
-    //ÇÃ·¹ÀÌ¾î°¡ Æ÷Å»À» ÅëÇØ ¸Ê ÀÌµ¿½Ã playMapÀ» ´ÙÀ½ ¸ÊÀ¸·Î ¹Ù²ãÁÜ
+    //ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½Å»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ playMapï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
     public static Map Map
     {
         get
@@ -112,7 +102,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    //playmapÀ¸·Î Ä«¸Þ¶ó¸¦ ¼¼ÆÃÇØÁÜ
+    //playmapï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void MapCamera()
     {
         CameraManager.Instance.SetPosSize(player.transform.position, Map.camera_MaxSize, Map.Camera_MinSize);
@@ -131,7 +121,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.gameObject.SetActive(active);
     }
 
-    //º¸½º°¡ Á×À» ¶§ ³Ö¾îÁÙ ½½·Î¿ì¸ð¼Ç ±â´É
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     public void SlowMothion(float time, float endTime)
     {
         isSlowMotion = true;
