@@ -26,6 +26,12 @@
 
 ## 1-1 주요 기능 코드
 
+- **GameManager.cs**
+  - [GameManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/System/GameManager.cs)
+  - 게임의 상태 및 중요 변수 초기화를 합니다.
+
+<br><br>
+
 - **ObjectPool.cs**
   - [ObjectPool.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Utll/ObjectPool.cs)
   - 오브젝트의 효율적인 관리를 위해 오브젝트 풀링 기법을 사용하였습니다.
@@ -104,6 +110,13 @@
 
 ## 2-1 주요 기능 코드
 
+- **GameManager.cs**
+  - [GameManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/GameManager.cs)
+  - 게임에 관련해 종합적으로 관리를 담당하는 클래스입니다.
+  - 게임 상태를 관리하고 퀘스트 이벤트를 이용해 퀘스트 퀘스트 상황을 처리합니다.
+
+<br><br>
+
 - **EnemyAI.cs**
   - [EnemyAI.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
   - 몬스터의 AI와 동작을 관리하는 클래스입니다.
@@ -159,8 +172,10 @@
 
 <br><br>
 
-- **.cs**
-  - [.cs]()
+- **BossEntry.cs**
+  - [BossEntry.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Map/Scene_Dungeon1/BossEntry.cs)
+  - 시네머신을 이용한 컷신을 제어하기 위한 클래스입니다.
+  - 미리 만들어둔 타임라인을 재생하고 시그널을 이용해 메서드를 제어했습니다.
 
 <br><br>
 
