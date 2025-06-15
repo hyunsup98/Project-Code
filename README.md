@@ -117,11 +117,39 @@
 
 <br><br>
 
-- **EnemyAI.cs**
-  - [EnemyAI.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Pattern/Behavior%20Tree/EnemyAI.cs)
-  - 몬스터의 AI와 동작을 관리하는 클래스입니다.
-  - 행동트리를 사용해 몬스터의 행동을 관리합니다.
-- 행동트리 관련 스크립트: 같은 경로의 BehaviorTreeRunner.cs, INode.cs, ActionNode.cs, SelectorNode.cs, SequenceNode.cs
+- **DataManager.cs**
+  - [DataManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/DataManager.cs)
+  - 유저 데이터 및 옵션 데이터를 Json 형식으로 파싱 후 base64로 인코딩하는 방식을 사용하였습니다.
+
+<br><br>
+
+- **Option.cs**
+  - [Option.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/Option.cs)
+  - 옵션을 설정하는 UI를 관리하는 클래스입니다.
+  - 사운드 볼륨 조절, 해상도, 그래픽 품질을 설정할 수 있습니다.
+  - 그래픽 품질은 낮음, 보통, 높음으로 설정되어 있는 파이프라인을 가져와 적용합니다.
+
+<br><br>
+
+- **Singleton.cs**
+  - [Singleton.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/System/Singleton.cs)
+  - 제네릭을 이용해 Singleton 클래스를 상속만 하면 쉽게 싱글턴 패턴을 사용할 수 있도록 하였습니다.
+
+<br><br>
+
+- **Inventory.cs**
+  - [Inventory.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/Inventory/Inventory.cs)
+  - 관련 클래스: [Slot.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/Inventory/Slot.cs) | [DragSlot](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/Inventory/DragSlot.cs)
+  - 인벤토리를 관리하는 클래스입니다.
+  - 아이템의 MaxCount와 추가될 개수를 비교하여 아이템을 추가할 수 있고 슬롯끼리의 아이템 바꾸기, 아이템 제거 등의 기능이 있습니다.
+  - Slot과 DragSlot에서 IPointer 인터페이스를 이용한 상호작용을 통해 여러 기능을 담당하고 있습니다.
+
+<br><br>
+
+- **LoadingSceneController.cs**
+  - [LoadingSceneController.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/LoadingSceneController.cs)
+  - 씬을 넘어갈 때 로딩 화면을 띄워주기 위한 클래스입니다.
+  - 비동기식으로 뒤에서 씬을 로드하며 화면에는 로딩 화면을 띄워줍니다.
 
 <br><br>
 
@@ -143,6 +171,7 @@
 
 - **Qeust.cs**
   - [Quest.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Quest/Quest.cs)
+  - 관련 클래스: [QuestInfo](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/QuestInfo.cs) | [QuestList](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/QuestList.cs) | [QuestSlot](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/QuestSlot.cs)
   - Scriptable Object 방식을 사용한 퀘스트 클래스입니다.
   - 몬스터 처치, 자원 수집, npc 대화의 유형이 있고, 퀘스트 진행 상황은 수락 전, 수락, 완료(보상 받기 전), 완료(보상 받기 후)로 나뉩니다.
 
