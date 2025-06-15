@@ -151,14 +151,17 @@ public class Boss_BoneDragon : Entity
         bossState = BossState.ATTACK;
         bool isAtkDone = false;
 
-        if(!PlayerIsFront())
+        if(PlayerIsBackSight())
         {
             int ran = Random.Range(0, 10);
 
             if(ran < 7)
             {
                 if (PlayerIsRight())
+                {
                     animator.SetTrigger("tailattacktwo");
+                    Debug.Log("오른쪽");
+                }
                 else
                     animator.SetTrigger("tailattack");
 
@@ -181,6 +184,7 @@ public class Boss_BoneDragon : Entity
         }
     }
 
+    //애니메이션 이벤트에서 사용
     private IEnumerator Idle()
     {
         float delay = Random.Range(1.2f, 3f);
@@ -210,8 +214,8 @@ public class Boss_BoneDragon : Entity
         yield return new WaitForSeconds(time);
     }
 
-    //대미지를 입을 때 백어택 여부 판단, true면 백어택x / false면 백어택
-    private bool PlayerIsFront()
+    //대미지를 입을 때 백어택 여부 판단, true면 백어택 / false면 백어택x
+    private bool PlayerIsBackSight()
     {
         Vector3 targetDir = (player.transform.position - transform.position).normalized;
 
@@ -221,11 +225,8 @@ public class Boss_BoneDragon : Entity
         //내적을 이용해서 보스와 플레이어 간의 각도 구하기
         float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
 
-        //플레이어가 보스 뒤에 있고 && 시야각 안에 있다면 false
-        if (angle > backSight)
-            return false;
-
-        return true;
+        //플레이어가 보스 뒤 백 판정에 있으면 true
+        return angle > 120f;
     }
 
     //외적을 이용해 플레이어가 좌우 어디에 있는지 판단, true면 오른쪽 / false면 왼쪽
@@ -233,12 +234,9 @@ public class Boss_BoneDragon : Entity
     {
         Vector3 targetDir = (player.transform.position - transform.position).normalized;
 
-        Vector3 cross = Vector3.Cross(transform.up, targetDir);
+        Vector3 cross = Vector3.Cross(transform.forward, targetDir);
 
-        if(cross.x > 0)
-            return true;
-
-        return false;
+        return cross.y > 0;
     }
 
 
@@ -250,7 +248,7 @@ public class Boss_BoneDragon : Entity
 
     public override void HitEvent(AtkEvent atk)
     {
-        if (!PlayerIsFront())
+        if (PlayerIsBackSight())
         {
             atk.damageType = DamageType.Critical;
             atk.damage *= 1.5f;
@@ -332,5 +330,33 @@ public class Boss_BoneDragon : Entity
         {
             rigid.isKinematic = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        // 파라미터
+        float viewDistance = 3f;
+
+        // 위치와 방향
+        Vector3 position = transform.position;
+        Vector3 forward = transform.forward;
+        Vector3 back = -forward;
+
+        // 기준선: forward (초록)
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(position, position + forward * viewDistance);
+
+        // 뒤쪽 시야 범위 각도
+        float halfAngle = backSight / 2f;
+
+        // 좌우 경계선 방향 계산
+        Vector3 leftDir = Quaternion.AngleAxis(-halfAngle, Vector3.up) * back;
+        Vector3 rightDir = Quaternion.AngleAxis(halfAngle, Vector3.up) * back;
+
+        // 뒤쪽 시야 경계선 (빨강)
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(position, position + leftDir * viewDistance);
+        Gizmos.DrawLine(position, position + rightDir * viewDistance);
+
     }
 }
