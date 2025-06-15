@@ -70,6 +70,7 @@
 
 - **Boss.cs**
   - [Boss.cs](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Entity/Boss/Boss.cs)
+  - Boss.cs 상속하는 클래스: [Boss_Fishron](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Entity/Boss/Boss_Fishron.cs) | [Boss_Magician](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Entity/Boss/Boss_Magician.cs) | [Boss_Slime](https://github.com/hyunsup98/Project-Code/blob/main/Chaos%20Dungeon/Chaos%20Dungeon%20Scripts/Entity/Boss/Boss_Slime.cs)
   - 보스의 이동 및 공격 패턴을 관리하는 추상클래스입니다.
   - 각 스테이지 별 보스 클래스는 해당 클래스를 상속받아 패턴 메서드를 재정의해 공격 방식을 재구성 하였습니다.
 
@@ -113,6 +114,7 @@
 
 - **NPC.cs**
   - [NPC.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/NPC/NPC.cs)
+  - NPC.cs를 상속하는 클래스: [NPC_BlackSmith](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/NPC/NPC_BlackSmith.cs) | [NPC_ShopKeeper](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/NPC/NPC_ShopKeeper.cs)
   - NPC를 관리하는 추상클래스입니다.
   - 충돌체크를 통해 대화가 가능한지 여부를 체크하고, E키를 누르면 대사 UI를 띄워 출력 및 이벤트 메서드를 실행합니다.
 
@@ -133,18 +135,27 @@
 
 <br><br>
 
-- **.cs**
-  - [.cs]()
+- **Boss_BoneDragon.cs**
+  - [Boss_BoneDragon.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/Boss_BoneDragon.cs)
+  - 보스 씬의 보스를 제어하는 클래스입니다.
+  - 상태패턴을 이용해서 보스의 동작을 제어하고 공격할 땐 내적과 외적을 이용하여 플레이어가 보스의 앞뒤, 좌우중 어디에 있는지 판별하여 각기 다른 패턴을 사용하게 구현했습니다.
+  - 애니메이션 이벤트를 통해 보스 공격의 타격 시점과 사운드를 제어했습니다.
 
 <br><br>
 
-- **.cs**
-  - [.cs]()
+- **PlayerController.cs**
+  - [PlayerController.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/Entity/Player/PlayerController.cs)
+  - IPlayerState 인터페이스를 이용해 플레이어가 손에 들고 있는 도구의 타입에 따라 각기 다른 애니메이션을 재생합니다.
+  - 애니메이션 이벤트를 이용해서 콤보 어택 구현했습니다.
+  - 레이캐스트를 이용해서 아이템이 에임상에 있는지 체크 후 획득 가능 ui를 띄우고 획득 가능한 상태로 만듭니다.
+  - 자연스러운 애니메이션 전환을 위해서 블렌딩을 사용하거나 레이어를 두 개로 나누어 상황에 맞게 사용했습니다.
 
 <br><br>
 
-- **.cs**
-  - [.cs]()
+- **EntityUIManager.cs | WorldUI.cs**
+  - [EntityUIManager.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/EntityUIManager.cs) | [WorldUI.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/WorldUI.cs)
+  - WorldUI.cs 상속하는 클래스: [DamageText.cs](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/DamageText.cs) | [HPBarUI](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/HPBarUI.cs) | [NpcUI](https://github.com/hyunsup98/Project-Code/blob/main/Poly%20Hero/Poly%20Hero%20Scripts/UI/NpcUI.cs)
+  - 엔티티들의 정보를 확인할 수 있는 UI로 월드상 좌표에 위치할 UI들을 관리하는 클래스입니다.
 
 <br><br>
 
