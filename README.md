@@ -11,6 +11,8 @@
 
 ## 2. [Poly Hero](#2-Poly-Hero-1)
 
+## 3. [MiniGame Rush!](#2-Poly-Hero-1)
+
 <br><br><br>
 
 # 1. 카오스 던전
@@ -213,8 +215,6 @@
 [목차로](#목차)
 
 </div>
-
-
 
 
 
