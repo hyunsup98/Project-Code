@@ -11,7 +11,7 @@
 
 ## 2. [Poly Hero](#2-Poly-Hero-1)
 
-## 3. [MiniGame Rush!](#2-Poly-Hero-1)
+## 3. [MiniGame Rush! (추가중)]()
 
 <br><br><br>
 
